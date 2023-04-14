@@ -26,6 +26,6 @@ Do not program while the Rs232 level converter is connected.
 
 Copy one of the sketches (. ino file) below to your PC and create a folder with exactly the same name as the copied file. Now move the copied file into the new folder.
 Now in the Arduino IDE go to “Files” menu, choose open and navigate to the .ino file and open it.
-
+No libraries needed.
 Also see the document: "Build a tune button for the FTdx101 (01-04-2023)".
 
