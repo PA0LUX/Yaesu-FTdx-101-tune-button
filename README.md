@@ -1,4 +1,4 @@
-# Yaesu-FTdx-101-tune-button
+# Yaesu-FTdx-101-tune-button (for "M" and "MP)
 Build an external tune button for a Yaesu FTdx-101, managed by an Arduino NANO
 The FTdx-101 does not have a separate power setting when the tune signal is engaged. The tune signal (TxReq) is available on pin 11 of the linear connector. When this pin is connected to ground the transceiver outputs a carrier which can be used i.e., to tune an amplifier. Unlike other Yaesu transceivers it will output with the present power setting. There are several work-arounds but, I think, no one as nice as a one button tune would be.
 
