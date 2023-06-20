@@ -19,7 +19,7 @@ I first used AM here, but found that when an AM transmission was started, there 
 Both solutions work fine. So just pick one.
 
 It is advised to use a connector at least at one end for the connections between Arduino and Rs232 level converter.
-Note; Do NOT connect USB and RS232 at the same time, it will not work (will do no harm either). Also, better not to connect 13,8V and USB at the same time.
+Note; Do NOT connect USB and RS232 (of the Arduino) at the same time, it will not work (will do no harm either). Also, better not to connect 13,8V and USB at the same time.
 
 Do not program while the Rs232 level converter is connected.
 
