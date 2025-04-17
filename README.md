@@ -1,10 +1,10 @@
-# Yaesu external tune-button for FTdx-101(MP and D), FT-991(a), FTdx-10, FT-710 and others.
+# Yaesu external tune-button for FTdx-101(MP and D), FT-991(a), FTdx-10 and others.
 Build an external tune button for a Yaesu transceivers, managed by an Arduino NANO
 Reason:The FTdx-101 does not have a separate power setting when the tune signal is engaged. The tune signal (TxReq) is available on pin 11 of the linear connector. When this pin is connected to ground the transceiver outputs a carrier which can be used i.e., to tune an amplifier. Unlike some other Yaesu transceivers it will output with the present power setting. There are several work-arounds but, I think, no one as nice as a one button tune would be.
 
 Here you find circuits and sketches with an Arduino-Nano (I used a clone) that will take care of one-button tuning. Probably every type of Arduino will work, as long as it has the Rx and Tx connections available.
 
-The tune circuit is to be connected to the RS232 connector of the transceiver (thru a null modem cable), thus leaving the USB connector of the transceiver available for other logging and/or CAT software. The Arduino cannot directly be connected to the transceiver. The transceiver talks RS232 and the Arduino talks TTL levels. Therefore, a simple Rs232 – TTL level converter is used, widely available for about 2 euros. It comes complete with a 9 pin Rs232 D-connector.
+The tune circuit is to be connected to the RS232 connector of the transceiver (thru a null modem cable), thus leaving the USB connector of the transceiver available for other logging and/or CAT software. Therefore the transceivers needs to have a Rs232 connector available. The Arduino cannot directly be connected to the transceiver. The transceiver talks RS232 and the Arduino talks TTL levels. Therefore, a simple Rs232 – TTL level converter is used, widely available for about 2 euros. It comes complete with a 9 pin Rs232 D-connector.
 
 The circuit has one momentary pushbutton and (optional) a red and green led. Pressing the button will result in a tune signal and when released the tuning signal will stop. The present power setting is restored after the button has been released. The tune power can be adapted in the sketch with the variable; set_tune_pwr "PC020;" The 020 means 20W. You can change it to anything between 005 and 100. 
 
