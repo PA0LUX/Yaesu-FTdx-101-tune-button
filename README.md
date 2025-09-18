@@ -1,4 +1,4 @@
-# Yaesu external tune-button for FTdx-101(MP and D), FT-991(a), FTdx-10 and others.
+# Yaesu external tune-button for FTdx-101(MP and D), FT-991(a), FTdx-10 and others. Added support for Tune button in Split mode for FTdx101D and MP.
 Build an external tune button for a Yaesu transceivers, managed by an Arduino NANO
 Reason:The FTdx-101 does not have a separate power setting when the tune signal is engaged. The tune signal (TxReq) is available on pin 11 of the linear connector. When this pin is connected to ground the transceiver outputs a carrier which can be used i.e., to tune an amplifier. Unlike some other Yaesu transceivers it will output with the present power setting. There are several work-arounds but, I think, no one as nice as a one button tune would be.
 
@@ -17,7 +17,7 @@ For transceivers other than the FTdx101 it is possible that you have to use a di
 The second solution does not use the TxReq signal. Instead of that it uses the FM-N mode. At tune button press, it not only stores the present power setting but also the present mode. It will then engage a FM-N transmission. After the button has been released it restores mode and then power.
 I first used AM here, but found that when an AM transmission was started, there was a short increase (peak) in output power. I do not know if that is common for all Yaesu transceivers, but switching to FM-N solved that issue.
 
-Both solutions work fine. FM-N is recommended, it easiest.
+Both solutions work fine. FM-N is recommended, it is easiest. It also supports tuning in Split mode (VFO A and VFO B). But only for FTdx101D and FTdx101MP. 
 
 It is advised to use a connector at least at one end for the connections between Arduino and Rs232 level converter.
 Note; Do NOT connect USB and RS232 (of the Arduino) at the same time, it will not work (will do no harm either). Also, better not to connect 13,8V and USB at the same time.
